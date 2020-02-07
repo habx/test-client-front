@@ -31,10 +31,10 @@ data.
 ### Tech
 You are required to use [react](https://github.com/facebook/react) with
 [apollo-client](https://github.com/apollographql/react-apollo) to make
-your graphQL api calls. It is appreciated that you use
+your GraphQL api calls. It is appreciated that you use
 [typescript](https://github.com/microsoft/TypeScript)
 
-You can generate types based on your graphql requests by running `npm
+You can generate types based on your GraphQL requests by running `npm
 run build:types`
 
 #### Recommended libraries
@@ -59,7 +59,7 @@ with yarn
 ### API
 
 The api is mocked client side and has the following
-[graphql](https://graphql.org/) schema.
+[GraphqQL](https://graphql.org/) schema.
 
 ### Graphql schema
 ```graphql
@@ -103,3 +103,7 @@ The api is mocked client side and has the following
       
 ```
 
+
+If you have any question, don't hesitate to ask our team 🤘
+
+Good luck ! 🤗
