@@ -4,7 +4,7 @@
   <img height="80" src="https://res.cloudinary.com/habx/image/upload/logos/habx-framed.png" />
 </p>
 
-# Front-end test 👨‍💻
+# Front-end technical test 👨‍💻
 
 The goal of this test is to recreate a housing setup like we have at
 [habx](https://www.habx.com/fr/).
