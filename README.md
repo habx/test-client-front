@@ -63,6 +63,30 @@ with yarn
 The api is mocked client side and has the following
 [GraphqQL](https://graphql.org/) schema.
 
+### Graphql API
+#### Project query
+```graphql
+  query {
+    project {
+      id
+      name
+      properties {
+        priceRange
+        surfaceRange
+        exposures
+        typologies
+      }
+    }
+  }
+```
+
+#### Setup mutation
+```graphql
+  mutation($setup: SetupInput!) {
+    upsertSetup(setup)
+  }
+```
+
 ### Graphql schema
 ```graphql
     
