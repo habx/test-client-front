@@ -43,6 +43,8 @@ run build:types`
 * [styled-components](https://github.com/styled-components/styled-components)
 * [final-form](https://github.com/final-form/react-final-form)
 
+You could start by editing the `Setup` component. You are free to imagine the UI/UX.
+
 
 ## How to run the client
 ```shell
