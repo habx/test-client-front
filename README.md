@@ -1,4 +1,10 @@
-# Habx front-end test
+
+
+<p align="center" style="margin: 0 auto">
+  <img height="80" src="https://res.cloudinary.com/habx/image/upload/logos/habx-framed.png" />
+</p>
+
+# Front-end test 👨‍💻
 
 The goal of this test is to recreate a housing setup like we have at
 [habx](https://www.habx.com/fr/).
@@ -17,7 +23,7 @@ it to fill all the requirements.
 
 ## Requirements
 
-### Product
+### Description
 
 The component should be a form where 4 informations are asked:
 * **Budget** (€)
@@ -25,43 +31,52 @@ The component should be a form where 4 informations are asked:
 * **Typology** *one option possible*
 * **Exposure** *multiple options possible*
 
-The form should have a minimum of validation and be based on project
-data.
+The form should have a minimum of *validation* and be *based on project
+data*.
+
+User inputs have to be saved with the `upsertSetup` mutation.
+
+That's it ! ⛳️
 
 ### Tech
+
 You are required to use [react](https://github.com/facebook/react) with
 [apollo-client](https://github.com/apollographql/react-apollo) to make
-your GraphQL api calls. It is appreciated that you use
-[typescript](https://github.com/microsoft/TypeScript)
+your GraphQL api calls. 👮‍♂️ 
+
+It is appreciated that you use [typescript](https://github.com/microsoft/TypeScript). 🤓
 
 You can generate types based on your GraphQL requests by running `npm
-run build:types`
+run build:types` 💪
+
 
 #### Recommended libraries
-* [@habx/ui-core](https://github.com/habx/ui-core) our UI components
-  library
-* [styled-components](https://github.com/styled-components/styled-components)
-* [final-form](https://github.com/final-form/react-final-form)
 
-You could start by editing the `Setup` component. You are free to imagine the UI/UX.
+Here are some libraries we are using daily, better getting use to it right away no ? 😉
+
+* [@habx/ui-core](https://github.com/habx/ui-core) our UI components
+  library ✨
+* [styled-components](https://github.com/styled-components/styled-components) 💅
+* [final-form](https://github.com/final-form/react-final-form) 🎛
+
+You could start by editing the `Setup` component. You are free to imagine the UI/UX. 👨‍🎨
 
 
 ## How to run the client
 ```shell
-    npm install
-    npm run start
+  npm install
+  npm run start
 ```
 
 with yarn
 ```shell
-    yarn
-    yarn start
+  yarn
+  yarn start
 ```
 
 ### API
 
-The api is mocked client side and has the following
-[GraphqQL](https://graphql.org/) schema.
+The api is mocked client side and is described bellow
 
 ### Graphql API
 #### Project query
