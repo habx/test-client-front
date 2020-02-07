@@ -1,23 +1,54 @@
-# See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
+# Environment Configuration
+.env
 
-# dependencies
-/node_modules
-/.pnp
-.pnp.js
+# Build output folders
+build/
+build-test/
+out/
 
-# testing
-/coverage
+# Logs
+logs
+*.log
+.cache
 
-# production
-/build
+# Runtime data
+pids
+*.pid
+*.seed
 
-# misc
+# Coverage directory used by tools like istanbul
+coverage
+
+# node-waf configuration
+.lock-wscript
+
+# Dependency directory
+# https://www.npmjs.org/doc/misc/npm-faq.html#should-i-check-my-node_modules-folder-into-git-
+node_modules
+
+# Debug log from npm
+npm-debug.log
+
+# IntelliJ IDE ignore
+.idea
+
+# Visual Studio Code
+.vscode
+.history
+
+# flow-typed Lib Defs
+flow-typed/
+
+# Flow Coverage Report
+flow-coverage/
+
+# Happypack
+.happypack
+
+# OSX Files
 .DS_Store
-.env.local
-.env.development.local
-.env.test.local
-.env.production.local
 
-npm-debug.log*
-yarn-debug.log*
-yarn-error.log*
+.storybook-static
+
+graphql.schema.json
+schema.graphql

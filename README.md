@@ -1,44 +1,105 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# Habx front-end test
 
-## Available Scripts
+The goal of this test is to recreate a housing setup like we have at
+[habx](https://www.habx.com/fr/).
 
-In the project directory, you can run:
+You can see examples on our
+[old setup](https://www.habx.com/setup/involvements/champs-joliot/fondamentals)
+and on our
+[brand new product match](https://www.habx-dev.fr/prj/iframe?url=https%3A%2F%2Fwww.habx.com%2Fmatch%2Fhabx%2Fprojects%2Fdemo-fr%2Fsetup%2F0%3F)
 
-### `yarn start`
+<p align="center" style="margin: 0 20%">
+  <img height="200" src="https://res.cloudinary.com/habx/image/upload/tech/front-test/setup.png" />
+</p>
 
-Runs the app in the development mode.<br />
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+This repository is the template of the test, you are asked to complete
+it to fill all the requirements.
 
-The page will reload if you make edits.<br />
-You will also see any lint errors in the console.
+## Requirements
 
-### `yarn test`
+### Product
 
-Launches the test runner in the interactive watch mode.<br />
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+The component should be a form where 4 informations are asked:
+* **Budget** (€)
+* **Surface** (m²)
+* **Typology** *one option possible*
+* **Exposure** *multiple options possible*
 
-### `yarn build`
+The form should have a minimum of validation and be based on project
+data.
 
-Builds the app for production to the `build` folder.<br />
-It correctly bundles React in production mode and optimizes the build for the best performance.
+### Tech
+You are required to use [react](https://github.com/facebook/react) with
+[apollo-client](https://github.com/apollographql/react-apollo) to make
+your graphQL api calls. It is appreciated that you use
+[typescript](https://github.com/microsoft/TypeScript)
 
-The build is minified and the filenames include the hashes.<br />
-Your app is ready to be deployed!
+You can generate types based on your graphql requests by running `npm
+run build:types`
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+#### Recommended libraries
+* [@habx/ui-core](https://github.com/habx/ui-core) our UI components
+  library
+* [styled-components](https://github.com/styled-components/styled-components)
+* [final-form](https://github.com/final-form/react-final-form)
 
-### `yarn eject`
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+## How to run the client
+```shell
+    npm install
+    npm run start
+```
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+with yarn
+```shell
+    yarn
+    yarn start
+```
 
-Instead, it will copy all the configuration files and the transitive dependencies (Webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+### API
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+The api is mocked client side and has the following
+[graphql](https://graphql.org/) schema.
 
-## Learn More
+### Graphql schema
+```graphql
+    
+    type Range {
+      min: Int
+      max: Int
+    }
+    type ProjectProperties {
+      priceRange: Range
+      surfaceRange: Range
+      exposures: [String]
+      typologies: [Int]
+    }
+    
+    type Project {
+      id: ID
+      name: String
+      properties: ProjectProperties
+    }
+    
+    type Query {
+      project: Project
+    }
+    
+    input SetupInput {
+      budget: Int!
+      surface: Int!
+      exposures: [String]!
+      typology: Int!
+    }
+    
+    type Mutation {
+      upsertSetup(setup: SetupInput!): Boolean
+    }
+    
+    schema {
+      query: Query
+      mutation: Mutation
+    }
+      
+```
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
