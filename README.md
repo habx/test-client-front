@@ -74,7 +74,7 @@ with yarn
   yarn start
 ```
 
-### API
+## API
 
 The api is mocked client side and is described bellow
 
