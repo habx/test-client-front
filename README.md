@@ -12,7 +12,7 @@ The goal of this test is to recreate a housing setup like we have at
 You can see examples on our
 [old setup](https://www.habx.com/setup/involvements/champs-joliot/fondamentals)
 and on our
-[brand new product match](https://www.habx-dev.fr/prj/iframe?url=https%3A%2F%2Fwww.habx.com%2Fmatch%2Fhabx%2Fprojects%2Fdemo-fr%2Fsetup%2F0%3F)
+[new product](https://www.habx-dev.fr/prj/iframe?url=https%3A%2F%2Fwww.habx.com%2Fmatch%2Fhabx%2Fprojects%2Fdemo-fr%2Fsetup%2F0%3F)
 
 <p align="center" style="margin: 0 20%">
   <img height="200" src="https://res.cloudinary.com/habx/image/upload/tech/front-test/setup.png" />
