@@ -47,7 +47,7 @@ your GraphQL api calls. 👮‍♂️
 It is appreciated that you use [typescript](https://github.com/microsoft/TypeScript). 🤓
 
 You can generate types based on your GraphQL requests by running `npm
-run build:types` 💪
+run build:types` after having installed [apollo-tooling](https://github.com/apollographql/apollo-tooling)💪
 
 
 #### Recommended libraries
