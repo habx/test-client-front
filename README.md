@@ -52,7 +52,7 @@ run build:types` 💪
 
 #### Recommended libraries
 
-Here are some libraries we are using daily, better getting use to it right away no ? 😉
+Here are some libraries we are using daily, better getting use to it right away don't you think ? 😉
 
 * [@habx/ui-core](https://github.com/habx/ui-core) our UI components
   library ✨
