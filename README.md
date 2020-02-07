@@ -98,7 +98,7 @@ The api is mocked client side and is described bellow
 #### Setup mutation
 ```graphql
   mutation($setup: SetupInput!) {
-    upsertSetup(setup)
+    upsertSetup(setup: $setup)
   }
 ```
 
