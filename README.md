@@ -9,10 +9,7 @@
 The goal of this test is to recreate a housing setup like we have at
 [habx](https://www.habx.com/fr/).
 
-You can see examples on our
-[old setup](https://www.habx.com/setup/involvements/champs-joliot/fondamentals)
-and on our
-[new product](https://www.habx-dev.fr/prj/iframe?url=https%3A%2F%2Fwww.habx.com%2Fmatch%2Fhabx%2Fprojects%2Fdemo-fr%2Fsetup%2F0%3F)
+You can see an example [here](https://www.habx-dev.fr/prj/iframe?url=https%3A%2F%2Fwww.habx.com%2Fmatch%2Fhabx%2Fprojects%2Fdemo-fr%2Fsetup%2F0%3F)
 
 <p align="center" style="margin: 0 20%">
   <img height="200" src="https://res.cloudinary.com/habx/image/upload/tech/front-test/setup.png" />
@@ -20,6 +17,7 @@ and on our
 
 This repository is the template of the test, you are asked to complete
 it to fill all the requirements.
+
 
 ## Requirements
 
@@ -40,19 +38,19 @@ That's it ! ⛳️
 
 ### Tech
 
-You are required to use [react](https://github.com/facebook/react) with
+We ask you to use [react](https://github.com/facebook/react) with
 [apollo-client](https://github.com/apollographql/react-apollo) to make
 your GraphQL api calls. 👮‍♂️ 
 
-It is appreciated that you use [typescript](https://github.com/microsoft/TypeScript). 🤓
+### Nice to have
 
-You can generate types based on your GraphQL requests by running `npm
-run build:types` after having installed [apollo-tooling](https://github.com/apollographql/apollo-tooling). 💪
-
+* use [typescript](https://github.com/microsoft/TypeScript), even better in strict mode with `apollo-tooling` 🤓
+* do some animations with tools you like
+* test the application: you can use `jest` or even `puppeteer` if you want 💃
 
 #### Recommended libraries
 
-Here are some libraries we are using daily, better getting use to it right away don't you think ? 😉
+Here are some libraries we are using daily, but you can use whatever you want ! 😉
 
 * [@habx/ui-core](https://github.com/habx/ui-core) our UI components
   library ✨
@@ -62,7 +60,10 @@ Here are some libraries we are using daily, better getting use to it right away 
 You could start by editing the `Setup` component. You are free to imagine the UI/UX. 👨‍🎨
 
 
-## How to run the client
+## How to start the test
+
+Fork the repo and clone it, then:
+
 ```shell
   npm install
   npm run start
@@ -73,6 +74,8 @@ with yarn
   yarn
   yarn start
 ```
+
+When you're done you can just send us the repository link 👨‍🏫
 
 ## API
 
