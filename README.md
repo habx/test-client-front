@@ -32,7 +32,8 @@ The component should be a form where 4 informations are asked:
 The form should have a minimum of *validation* and be *based on project
 data*.
 
-User inputs have to be saved with the `upsertSetup` mutation.
+User inputs have to be saved with the `upsertSetup` mutation with all
+required values.
 
 That's it ! ⛳️
 
@@ -44,9 +45,13 @@ your GraphQL api calls. 👮‍♂️
 
 ### Nice to have
 
-* use [typescript](https://github.com/microsoft/TypeScript), even better in strict mode with `apollo-tooling` 🤓
-* do some animations with tools you like
-* test the application: you can use `jest` or even `puppeteer` if you want 💃
+Pick at least one among the following 
+
+* use [typescript](https://github.com/microsoft/TypeScript) in strict
+  mode with `apollo-tooling` 🤓
+* do some animations with tools you like 💃
+* test the application: you can use `jest` or even `puppeteer` if you
+  want 🤹‍♀️
 
 #### Recommended libraries
 
