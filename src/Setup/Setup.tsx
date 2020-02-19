@@ -5,10 +5,9 @@ import { Button, Title } from '@habx/ui-core'
 
 import { projectQuery } from './Setup.query'
 import { SetupContainer } from './Setup.style'
-import { project } from './types/project'
 
-const Setup: React.FunctionComponent<SetupInterface> = () => {
-  const projectResponse = useQuery<project>(projectQuery)
+const Setup = () => {
+  const projectResponse = useQuery(projectQuery)
   return (
     <SetupContainer>
       <Title type="article">{projectResponse.data?.project.name}</Title>
@@ -17,7 +16,5 @@ const Setup: React.FunctionComponent<SetupInterface> = () => {
     </SetupContainer>
   )
 }
-
-interface SetupInterface {}
 
 export default Setup
