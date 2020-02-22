@@ -11,7 +11,7 @@
     "final-form": "^4.18.7",
     "graphql": "^14.6.0",
     "graphql-tag": "^2.10.3",
-    "graphql-tools": "^4.0.6",
+    "graphql-tools": "^4.0.7",
     "graphql.macro": "^1.4.2",
     "react": "^16.12.0",
     "react-dom": "^16.12.0",
