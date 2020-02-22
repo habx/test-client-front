@@ -9,7 +9,7 @@
 The goal of this test is to recreate a housing setup like we have at
 [habx](https://www.habx.com/fr/).
 
-You can see an example [here](https://www.habx.fr/prj/iframe?url=https%3A%2F%2Fwww.habx.com%2Fmatch%2Fhabx%2Fprojects%2Fdemo-fr%2Fsetup%2F0%3F)
+You can see an example [here](https://www.habx.com/prj/iframe?url=https%3A%2F%2Fwww.habx.com%2Fmatch%2Fhabx%2Fprojects%2Fdemo-fr%2Fsetup%2F0%3F)
 
 <p align="center" style="margin: 0 20%">
   <img height="200" src="https://res.cloudinary.com/habx/image/upload/tech/front-test/setup.png" />
@@ -41,7 +41,7 @@ That's it ! ⛳️
 
 We ask you to use [react](https://github.com/facebook/react) with
 [apollo-client](https://github.com/apollographql/react-apollo) to make
-your GraphQL api calls. 👮‍♂️ 
+your GraphQL API calls. 👮‍♂️ 
 
 ### Nice to have
 
