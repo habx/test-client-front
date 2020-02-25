@@ -1,3 +1,4 @@
 {
-  "extends": ["@habx/client/typescript"]
+  "extends": ["@habx/client/typescript"],
+  "ignorePatterns": "schema.graphql"
 }
