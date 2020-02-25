@@ -30,7 +30,7 @@ The component should be a form where 4 informations are asked:
 * **Exposure** *multiple options possible*
 
 The form should have a minimum of *validation* and be *based on project
-data*.
+properties* that should be fetched from the api.
 
 User inputs have to be saved with the `upsertSetup` mutation with all
 required values.
