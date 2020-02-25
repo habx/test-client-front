@@ -49,6 +49,3 @@ flow-coverage/
 .DS_Store
 
 .storybook-static
-
-graphql.schema.json
-schema.graphql

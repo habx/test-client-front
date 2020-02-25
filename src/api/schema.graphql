@@ -1,0 +1,39 @@
+## GRAPHQL SCHEMA
+## DO NOT EDIT
+
+type Range {
+  min: Int
+  max: Int
+}
+type ProjectProperties {
+  priceRange: Range
+  surfaceRange: Range
+  exposures: [String]
+  typologies: [Int]
+}
+
+type Project {
+  id: ID
+  name: String
+  properties: ProjectProperties
+}
+
+type Query {
+  project: Project
+}
+
+input SetupInput {
+  budget: Int!
+  surface: Int!
+  exposures: [String]!
+  typology: Int!
+}
+
+type Mutation {
+  upsertSetup(setup: SetupInput!): Boolean
+}
+
+schema {
+  query: Query
+  mutation: Mutation
+}
