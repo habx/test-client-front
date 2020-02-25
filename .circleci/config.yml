@@ -1,0 +1,101 @@
+version: 2.1
+
+# --- Anchor alias ---- #
+# - Docker configuration - #
+alias:
+# https://circleci.com/docs/2.0/circleci-images/#nodejs
+  - &docker_node12_configuration
+    docker:
+      - image: circleci/node:12.0.0
+        user: root
+  - &docker_buildpack_deps_configuration
+    docker:
+      - image: circleci/buildpack-deps:stretch
+        user: root
+# - Jobs filters - #
+  - &filters_ignore_tags
+    tags:
+      ignore: /.*/
+  - &filters_branch_allow_all
+    tags:
+      only: /.*/
+  - &filters_branch_tags_all
+    tags:
+      only: /.*/
+# - Step - #
+# - Node modules - #
+  - &install_node_modules_with_cache
+    node/with-cache:
+        dir: node_modules
+        cache-version: dev{{ .Environment.CACHE_VERSION }}
+        steps:
+          - run:
+              name: Install node module
+              command: npm install
+  - &install_node_modules_with_cache_production
+    node/with-cache:
+      dir: node_modules
+      cache-version: prod{{ .Environment.CACHE_VERSION }}
+      steps:
+        - run:
+            name: Install node module production
+            command: npm install --production
+  - &fetch_node_modules_with_cache_production
+    node/with-cache:
+      dir: node_modules
+      cache-version: prod{{ .Environment.CACHE_VERSION }}
+      steps:
+        - run: echo
+# --- Anchor alias ---- #
+jobs:
+  build:
+    <<: *docker_node12_configuration
+    steps:
+      - checkout
+      - *install_node_modules_with_cache_production
+      - *install_node_modules_with_cache
+      - run: export NODE_ENV=production; npm run build
+      - persist_to_workspace:
+          root: ~/project
+          paths:
+            - build
+  lint:
+    <<: *docker_node12_configuration
+    steps:
+      - checkout
+      - *install_node_modules_with_cache
+      - run: npm run lint
+
+  docker-build:
+    <<: *docker_buildpack_deps_configuration
+    steps:
+      - checkout
+      - attach_workspace:
+          at: ~/project
+      - docker/check
+      - docker/build:
+          image: $CIRCLE_PROJECT_USERNAME/$CIRCLE_PROJECT_REPONAME
+
+orbs:
+  node: circleci/node@1.0.1
+  docker: circleci/docker@0.5.20
+
+# --- END --- #
+workflows:
+  build:
+    jobs:
+      - build:
+          filters:
+            <<: *filters_branch_allow_all
+            <<: *filters_branch_tags_all
+      - lint:
+          filters:
+            <<: *filters_branch_allow_all
+            <<: *filters_branch_tags_all
+      - docker-build:
+          requires:
+            - lint
+            - build
+          filters:
+            <<: *filters_branch_allow_all
+            <<: *filters_branch_tags_all
