@@ -70,9 +70,9 @@ jobs:
     <<: *docker_buildpack_deps_configuration
     steps:
       - checkout
+      - setup_remote_docker  
       - attach_workspace:
           at: ~/project
-      - docker/check
       - docker/build:
           image: $CIRCLE_PROJECT_USERNAME/$CIRCLE_PROJECT_REPONAME
 
