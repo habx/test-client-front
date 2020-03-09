@@ -977,10 +977,10 @@
     prettier-eslint "^9.0.0"
     prettier-eslint-cli "^5.0.0"
 
-"@habx/ui-core@^2.19.1":
-  version "2.19.1"
-  resolved "https://registry.yarnpkg.com/@habx/ui-core/-/ui-core-2.19.1.tgz#50e8a95218b80c09b2c809e716c3af247834abf1"
-  integrity sha512-AJDEw0o9UBL0A1Ycp+bwLDf6+/77CjTgiYxlDIWdD7Te9m0guL7Cx/mk2OXdQkxV60SSQG4F3PoMgaHxY1yvuQ==
+"@habx/ui-core@^2.20.0":
+  version "2.20.0"
+  resolved "https://registry.yarnpkg.com/@habx/ui-core/-/ui-core-2.20.0.tgz#ffb5308101aba3304d62edcc3e6e225aca5cd807"
+  integrity sha512-auWOaVDJbO0307B/RNswvrFFdQ/Sc6GkKufGhVz5chxIifkETHw1xOvAm+EmSz0MGPikQqEU/Wp7DO40rlesDQ==
   dependencies:
     "@delangle/use-modal" "^1.3.29"
     color "^3.1.2"
