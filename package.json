@@ -7,7 +7,7 @@
     "@habx/ui-core": "^2.32.1",
     "apollo-cache-inmemory": "^1.6.5",
     "apollo-client": "^2.6.8",
-    "apollo-link-schema": "^1.2.4",
+    "apollo-link-schema": "^1.2.5",
     "final-form": "^4.19.1",
     "graphql": "^14.6.0",
     "graphql-tag": "^2.10.3",
