@@ -25,7 +25,7 @@
     "@types/react-dom": "^16.9.6",
     "@types/styled-components": "^5.1.0",
     "husky": "^4.2.5",
-    "lint-staged": "^10.1.4",
+    "lint-staged": "^10.1.6",
     "typescript": "~3.8.3"
   },
   "scripts": {
