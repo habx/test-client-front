@@ -23,10 +23,10 @@ it to fill all the requirements.
 ### Description
 
 The component should be a form where 4 informations are asked:
-* **Budget** (€)
-* **Surface** (m²)
-* **Typology** *one option possible*
-* **Exposure** *multiple options possible*
+* **Budget** (price in euros)
+* **Surface** (area in square meters)
+* **Typology** (nb of rooms) *one option possible* 
+* **Exposure** (north, south, east, west) *multiple options possible* 
 
 The form should have a minimum of *validation* and be *based on project
 properties* that should be fetched from the api.
