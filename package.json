@@ -10,7 +10,7 @@
     "apollo-link-schema": "^1.2.5",
     "final-form": "^4.20.1",
     "graphql": "^14.7.0",
-    "graphql-tag": "^2.10.3",
+    "graphql-tag": "^2.10.4",
     "graphql-tools": "^5.0.0",
     "graphql.macro": "^1.4.2",
     "react": "^16.13.1",
