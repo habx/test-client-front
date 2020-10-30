@@ -17,7 +17,7 @@
     "react-dom": "^16.14.0",
     "react-final-form": "^6.5.2",
     "react-scripts": "3.4.4",
-    "styled-components": "^5.2.0"
+    "styled-components": "^5.2.1"
   },
   "devDependencies": {
     "@habx/eslint-config-client": "^5.3.1",
