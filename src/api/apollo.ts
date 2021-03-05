@@ -2,10 +2,9 @@
     apollo configuration
     DO NOT EDIT
  */
-import { InMemoryCache } from 'apollo-cache-inmemory'
-import { ApolloClient } from 'apollo-client'
-import SchemaLink from 'apollo-link-schema'
-import { makeExecutableSchema } from 'graphql-tools'
+import { ApolloClient, InMemoryCache } from '@apollo/client'
+import { SchemaLink } from '@apollo/client/link/schema'
+import { makeExecutableSchema } from '@graphql-tools/schema'
 import { loader } from 'graphql.macro'
 
 import resolvers from './resolvers'

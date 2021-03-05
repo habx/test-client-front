@@ -5,10 +5,10 @@
 
 import { notify } from '@habx/ui-core'
 
-const validateSetup = setup => {
+const validateSetup = (setup: any) => {
   if (
-    !setup.exposures.every(exposure =>
-      PROJECT_PROPERTIES.exposures.find(e => e === exposure)
+    !setup.exposures.every((exposure: any) =>
+      PROJECT_PROPERTIES.exposures.find((e) => e === exposure)
     )
   ) {
     notify("😱 Cette exposition n'existe pas sur ce projet !", {
@@ -16,7 +16,7 @@ const validateSetup = setup => {
     })
     return false
   }
-  if (!PROJECT_PROPERTIES.typologies.find(t => t === setup.typology)) {
+  if (!PROJECT_PROPERTIES.typologies.find((t) => t === setup.typology)) {
     notify("😱 Cette typologie n'existe pas sur ce projet !", {
       type: 'error',
     })
@@ -67,7 +67,7 @@ export default {
     },
   },
   Mutation: {
-    upsertSetup: (_, { setup }) => {
+    upsertSetup: (_: any, { setup }: { setup: any }) => {
       if (!validateSetup(setup)) {
         return false
       }
