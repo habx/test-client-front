@@ -22,7 +22,7 @@ it to fill all the requirements.
 
 ### Description
 
-The component should be a form where 4 informations are asked:
+The component should be a form with 4 fields:
 * **Budget** (price in euros)
 * **Surface** (area in square meters)
 * **Typology** (nb of rooms) *one option possible* 
@@ -49,12 +49,12 @@ Pick at least one among the following
 * use [typescript](https://github.com/microsoft/TypeScript) in strict
   mode with `apollo-tooling` 🤓
 * do some animations with tools you like 💃
-* test the application: you can use `jest` or even `puppeteer` if you
+* test the application: you can use `jest` or even `cypress` if you
   want 🤹‍♀️
 
 #### Recommended libraries
 
-Here are some libraries we are using daily, but you can use whatever you want ! 😉
+Here are some libraries we use daily, but you can use whatever you want ! 😉
 
 * [@habx/ui-core](https://github.com/habx/ui-core) our UI components
   library ✨
