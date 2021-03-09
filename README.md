@@ -17,6 +17,22 @@ The goal of this test is to recreate a housing setup like we have at
 This repository is the template of the test, you are asked to complete
 it to fill all the requirements.
 
+## How to start the test
+
+Fork the repo and clone it, then:
+
+```shell
+  npm install
+  npm run start
+```
+
+with yarn
+```shell
+  yarn
+  yarn start
+```
+
+When you're done you can just send us the repository link 👨‍🏫
 
 ## Requirements
 
@@ -38,16 +54,14 @@ That's it ! ⛳️
 
 ### Tech
 
-We ask you to use [react](https://github.com/facebook/react) with
-[apollo-client](https://github.com/apollographql/react-apollo) to make
+We ask you to use [React](https://github.com/facebook/react) with [apollo-client](https://github.com/apollographql/react-apollo) to make
 your GraphQL API calls. 👮‍♂️ 
 
 ### Nice to have
 
 Pick at least one among the following 
 
-* use [typescript](https://github.com/microsoft/TypeScript) in strict
-  mode with `apollo-tooling` 🤓
+* use [Typescript](https://github.com/microsoft/TypeScript) in strict mode (you can generate graphql types by running `npm run build:types`) 🤓 
 * do some animations with tools you like 💃
 * test the application: you can use `jest` or even `cypress` if you
   want 🤹‍♀️
@@ -63,29 +77,19 @@ Here are some libraries we use daily, but you can use whatever you want ! 😉
 
 You could start by editing the `Setup` component. You are free to imagine the UI/UX. 👨‍🎨
 
+## Feedbacks
+Any thoughts about our development environment ? (create-react-app/graphql...)
+What tools are you using daily ?
 
-## How to start the test
-
-Fork the repo and clone it, then:
-
-```shell
-  npm install
-  npm run start
-```
-
-with yarn
-```shell
-  yarn
-  yarn start
-```
-
-When you're done you can just send us the repository link 👨‍🏫
 
 ## API
 
 The api is mocked client side and is described bellow
 
 ### Graphql API
+
+[Graphql schema](./src/api/schema.graphql)
+
 #### Project query
 ```graphql
   query {
@@ -109,47 +113,6 @@ The api is mocked client side and is described bellow
   }
 ```
 
-### Graphql schema
-```graphql
-    
-    type Range {
-      min: Int
-      max: Int
-    }
-    type ProjectProperties {
-      priceRange: Range
-      surfaceRange: Range
-      exposures: [String]
-      typologies: [Int]
-    }
-    
-    type Project {
-      id: ID
-      name: String
-      properties: ProjectProperties
-    }
-    
-    type Query {
-      project: Project
-    }
-    
-    input SetupInput {
-      budget: Int!
-      surface: Int!
-      exposures: [String]!
-      typology: Int!
-    }
-    
-    type Mutation {
-      upsertSetup(setup: SetupInput!): Boolean
-    }
-    
-    schema {
-      query: Query
-      mutation: Mutation
-    }
-      
-```
 
 
 If you have any question, don't hesitate to ask our team 🤘
