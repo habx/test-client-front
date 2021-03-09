@@ -3,11 +3,11 @@ version: 2.1
 # --- Anchor alias ---- #
 # - Docker configuration - #
 alias:
-# https://circleci.com/docs/2.0/circleci-images/#nodejs
-  - &docker_node12_configuration
-    docker:
-      - image: circleci/node:12.0.0
-        user: root
+  - &node_executor
+    executor:
+      name: node/default
+      # See https://circleci.com/developer/orbs/orb/circleci/node for available tags.
+      tag: "14.15"
   - &docker_buildpack_deps_configuration
     docker:
       - image: circleci/buildpack-deps:stretch
@@ -22,50 +22,35 @@ alias:
   - &filters_branch_tags_all
     tags:
       only: /.*/
-# - Step - #
 # - Node modules - #
-  - &install_node_modules_with_cache
-    node/with-cache:
-        dir: node_modules
-        cache-version: dev{{ .Environment.CACHE_VERSION }}
-        steps:
-          - run:
-              name: Install node module
-              command: npm install
-  - &install_node_modules_with_cache_production
-    node/with-cache:
-      dir: node_modules
-      cache-version: prod{{ .Environment.CACHE_VERSION }}
-      steps:
-        - run:
-            name: Install node module production
-            command: npm install --production
-  - &fetch_node_modules_with_cache_production
-    node/with-cache:
-      dir: node_modules
-      cache-version: prod{{ .Environment.CACHE_VERSION }}
-      steps:
-        - run: echo
+  - &install_npm
+    node/install-npm:
+      version: "7"
+  - &install_dependencies
+    node/install-packages:
+      cache-version: "{{ .Environment.CACHE_VERSION }}"
+      include-branch-in-cache-key: false
+      override-ci-command: npm ci --no-audit
 # --- Anchor alias ---- #
 jobs:
   build:
-    <<: *docker_node12_configuration
+    <<: *node_executor
     steps:
       - checkout
-      - *install_node_modules_with_cache_production
-      - *install_node_modules_with_cache
+      - *install_npm
+      - *install_dependencies
       - run: export NODE_ENV=production; npm run build
       - persist_to_workspace:
           root: ~/project
           paths:
             - build
   lint:
-    <<: *docker_node12_configuration
+    <<: *node_executor
     steps:
       - checkout
-      - *install_node_modules_with_cache
+      - *install_npm
+      - *install_dependencies
       - run: npm run lint
-
   docker-build:
     <<: *docker_buildpack_deps_configuration
     steps:
@@ -75,11 +60,9 @@ jobs:
           at: ~/project
       - docker/build:
           image: $CIRCLE_PROJECT_USERNAME/$CIRCLE_PROJECT_REPONAME
-
 orbs:
-  node: circleci/node@1.0.1
+  node: circleci/node@4.1.0
   docker: circleci/docker@0.5.20
-
 # --- END --- #
 workflows:
   build:

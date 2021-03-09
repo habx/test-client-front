@@ -6,7 +6,7 @@
     "start": "BROWSERSLIST_DANGEROUS_EXTEND=1 react-scripts start",
     "build": "BROWSERSLIST_DANGEROUS_EXTEND=1 react-scripts build",
     "lint": "eslint \"src/**\"",
-    "build:types": "apollo codegen:generate --localSchemaFile=src/api/schema.graphql --target=typescript --globalTypesFile=src/globalTypes/index.ts --includes=src/**/*.ts --tagName=gql --addTypename types"
+    "build:types": "npx apollo codegen:generate --localSchemaFile=src/api/schema.graphql --target=typescript --globalTypesFile=src/globalTypes/index.ts --includes=src/**/*.ts --tagName=gql --addTypename types"
   },
   "husky": {
     "hooks": {
@@ -38,6 +38,7 @@
     "@types/react": "^17.0.2",
     "@types/react-dom": "^17.0.1",
     "@types/styled-components": "^5.1.7",
+    "apollo": "^2.32.5",
     "husky": "^4.3.0",
     "lint-staged": "^10.5.1",
     "typescript": "~4.1.2"
