@@ -7,7 +7,7 @@
 # Front-end technical test 👨‍💻
 
 The goal of this test is to recreate a housing setup like we have at
-[habx](https://www.habx.com/fr/).
+[habx](https://www.habx.com/fr/). It should take you less than 2 hours but feel free to take more time if you still have something to show us!
 
 
 <p align="center" style="margin: 0 20%">
