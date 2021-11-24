@@ -22,14 +22,8 @@ it to fill all the requirements.
 Fork the repo and clone it, then:
 
 ```shell
-  npm install
-  npm run start
-```
-
-with yarn
-```shell
-  yarn
-  yarn start
+  npm ci
+  npm start
 ```
 
 When you're done you can just send us the repository link 👨‍🏫
