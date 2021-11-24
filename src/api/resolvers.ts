@@ -1,6 +1,6 @@
 /*
-    GraphqQL resolvers
-    DO NOT EDIT
+ * GraphqQL resolvers
+ * DO NOT EDIT
  */
 
 import { notify } from '@habx/ui-core'
@@ -56,23 +56,22 @@ const PROJECT_PROPERTIES = {
   typologies: [1, 2, 3, 4, 5, 6],
 }
 
-export default {
-  Query: {
-    project: () => {
-      return {
-        id: 1,
-        name: 'Fourqueux en Yvelines',
-        properties: PROJECT_PROPERTIES,
-      }
-    },
+export const Query = {
+  project: () => {
+    return {
+      id: 1,
+      name: 'Fourqueux en Yvelines',
+      properties: PROJECT_PROPERTIES,
+    }
   },
-  Mutation: {
-    upsertSetup: (_: any, { setup }: { setup: any }) => {
-      if (!validateSetup(setup)) {
-        return false
-      }
-      notify('Setup inserted ! ✅')
-      return true
-    },
+}
+
+export const Mutation = {
+  upsertSetup: (_: any, { setup }: { setup: any }) => {
+    if (!validateSetup(setup)) {
+      return false
+    }
+    notify('Setup inserted ! ✅')
+    return true
   },
 }

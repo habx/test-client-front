@@ -3,8 +3,8 @@
   "version": "0.2.0",
   "private": true,
   "scripts": {
-    "start": "BROWSERSLIST_DANGEROUS_EXTEND=1 react-scripts start",
-    "build": "BROWSERSLIST_DANGEROUS_EXTEND=1 react-scripts build",
+    "start": "cross-env BROWSERSLIST_DANGEROUS_EXTEND=1 react-scripts start",
+    "build": "cross-env BROWSERSLIST_DANGEROUS_EXTEND=1 react-scripts build",
     "lint": "eslint \"src/**\"",
     "build:types": "npx apollo codegen:generate --localSchemaFile=src/api/schema.graphql --target=typescript --globalTypesFile=src/globalTypes/index.ts --includes=src/**/*.ts --tagName=gql --addTypename types"
   },
@@ -19,29 +19,30 @@
     ]
   },
   "dependencies": {
-    "@apollo/client": "^3.3.11",
-    "@graphql-tools/schema": "^7.1.3",
-    "@habx/ui-core": "^5.22.0",
-    "final-form": "^4.20.2",
-    "graphql": "^15.5.0",
-    "graphql-tag": "^2.11.0",
+    "@apollo/client": "^3.5.5",
+    "@graphql-tools/schema": "^7.1.5",
+    "@habx/ui-core": "^5.48.0",
+    "final-form": "^4.20.4",
+    "graphql": "^15.7.2",
+    "graphql-tag": "^2.12.6",
     "graphql.macro": "^1.4.2",
-    "react": "^17.0.1",
-    "react-dom": "^17.0.1",
-    "react-final-form": "^6.5.2",
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2",
+    "react-final-form": "^6.5.7",
     "react-scripts": "4.0.3",
-    "styled-components": "^5.2.1"
+    "styled-components": "^5.3.3"
   },
   "devDependencies": {
-    "@habx/config-ci-front": "^0.7.0",
-    "@habx/eslint-config-client": "^6.0.0",
-    "@types/react": "^17.0.2",
-    "@types/react-dom": "^17.0.1",
-    "@types/styled-components": "^5.1.7",
-    "apollo": "^2.32.5",
-    "husky": "^4.3.0",
-    "lint-staged": "^10.5.1",
-    "typescript": "~4.1.2"
+    "@habx/config-ci-front": "^0.18.0",
+    "@habx/eslint-config-client": "^6.3.0",
+    "@types/react": "^17.0.37",
+    "@types/react-dom": "^17.0.11",
+    "@types/styled-components": "^5.1.15",
+    "apollo": "^2.33.9",
+    "cross-env": "^7.0.3",
+    "husky": "^4.3.8",
+    "lint-staged": "^12.1.2",
+    "typescript": "~4.5.2"
   },
   "browserslist": [
     "extends @habx/config-ci-front/browserslist"
