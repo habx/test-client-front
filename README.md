@@ -6,6 +6,8 @@
 
 # Front-end technical test 👨‍💻
 
+The objective of this test is to see how you adapt to our technologies and our way of coding, potentially integrating new concepts for you. We expect you to consider the test as a task you could be given during a sprint.
+
 The goal of this test is to recreate a housing setup like we have at
 [habx](https://www.habx.com/fr/). It should take you less than 2 hours but feel free to take more time if you still have something to show us!
 
